@@ -1,26 +1,21 @@
-import $ from "jquery"
+import $ from "jquery";
 
-jQuery(function() {
-    $("#myCarousel").carousel();
+import bootstrap from "bootstrap";
 
-    var modal = $("#myModal");
-    var btn = $("#open-btn");
-    var span = $(".close");
+import popper from "popper.js";
 
-    // Открытие модального окна
-    btn.on(function() {
-        modal.css("display", "block");
-    });
+$("#openModal").click(function() {
+    $("#myModal").css("display", "block");
+  });
 
-    // Закрытие модального окна при клике на крестик
-    span.on(function() {
-        modal.css("display", "none");
-    });
+  // Закрыть модальное окно при клике на крестик
+  $(".close").click(function() {
+    $("#myModal").css("display", "none");
+  });
 
-    // Закрытие модального окна при клике вне окна
-    $(window).on(function(event) {
-        if (event.target == modal[0]) {
-            modal.css("display", "none");
-        }
-    });
-});
+  // Закрыть модальное окно при клике вне его области
+  $(window).click(function(event) {
+    if (event.target == $("#myModal")[0]) {
+      $("#myModal").css("display", "none");
+    }
+  });

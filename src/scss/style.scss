@@ -1,4 +1,6 @@
-#open-btn {
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+#openModal {
     width: 150px;
     height: 30px;
     left: 50%;
@@ -36,6 +38,7 @@
     z-index: 2;
     padding: 5px;
     padding-right: 10px;
+    padding-left: 15px;
     border: 1px solid #888;
     width: 20%;
     height: 20%;
